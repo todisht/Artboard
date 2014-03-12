@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+
 @end
