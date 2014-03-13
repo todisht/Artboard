@@ -162,6 +162,7 @@
 		00F2B64518D0E6F0001FB2AB /* ArtBoard */ = {
 			isa = PBXGroup;
 			children = (
+				00F2B64618D0E6F0001FB2AB /* Supporting Files */,
 				00F2B64E18D0E6F0001FB2AB /* AppDelegate.h */,
 				00F2B64F18D0E6F0001FB2AB /* AppDelegate.m */,
 				00F2B65118D0E6F0001FB2AB /* Main_iPhone.storyboard */,
@@ -169,7 +170,6 @@
 				00F2B65718D0E6F0001FB2AB /* ViewController.h */,
 				00F2B65818D0E6F0001FB2AB /* ViewController.m */,
 				00F2B65A18D0E6F0001FB2AB /* Images.xcassets */,
-				00F2B64618D0E6F0001FB2AB /* Supporting Files */,
 				00F2B6A418D21CB6001FB2AB /* SettingsViewController.h */,
 				00F2B6A518D21CB6001FB2AB /* SettingsViewController.m */,
 			);
