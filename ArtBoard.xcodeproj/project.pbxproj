@@ -44,6 +44,7 @@
 		00F2B6A118D0F0C1001FB2AB /* thickness.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2B68B18D0F0C1001FB2AB /* thickness.png */; };
 		00F2B6A218D0F0C1001FB2AB /* width.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2B68C18D0F0C1001FB2AB /* width.png */; };
 		00F2B6A318D0F0C1001FB2AB /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2B68D18D0F0C1001FB2AB /* Yellow.png */; };
+		00F2B6A618D21CB6001FB2AB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2B6A518D21CB6001FB2AB /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		00F2B68B18D0F0C1001FB2AB /* thickness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thickness.png; sourceTree = "<group>"; };
 		00F2B68C18D0F0C1001FB2AB /* width.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = width.png; sourceTree = "<group>"; };
 		00F2B68D18D0F0C1001FB2AB /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		00F2B6A418D21CB6001FB2AB /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		00F2B6A518D21CB6001FB2AB /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				00F2B65818D0E6F0001FB2AB /* ViewController.m */,
 				00F2B65A18D0E6F0001FB2AB /* Images.xcassets */,
 				00F2B64618D0E6F0001FB2AB /* Supporting Files */,
+				00F2B6A418D21CB6001FB2AB /* SettingsViewController.h */,
+				00F2B6A518D21CB6001FB2AB /* SettingsViewController.m */,
 			);
 			path = ArtBoard;
 			sourceTree = "<group>";
@@ -276,6 +281,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Tim Todish";
 				TargetAttributes = {
+					00F2B63B18D0E6F0001FB2AB = {
+						DevelopmentTeam = C8L8V3D5WV;
+					};
 					00F2B65F18D0E6F0001FB2AB = {
 						TestTargetID = 00F2B63B18D0E6F0001FB2AB;
 					};
@@ -352,6 +360,7 @@
 				00F2B65918D0E6F0001FB2AB /* ViewController.m in Sources */,
 				00F2B65018D0E6F0001FB2AB /* AppDelegate.m in Sources */,
 				00F2B64C18D0E6F0001FB2AB /* main.m in Sources */,
+				00F2B6A618D21CB6001FB2AB /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,10 +497,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArtBoard/ArtBoard-Prefix.pch";
 				INFOPLIST_FILE = "ArtBoard/ArtBoard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,10 +513,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArtBoard/ArtBoard-Prefix.pch";
 				INFOPLIST_FILE = "ArtBoard/ArtBoard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

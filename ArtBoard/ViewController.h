@@ -5,6 +5,8 @@
 //  Created by Tim Todish on 3/12/14.
 //  Copyright (c) 2014 Tim Todish. All rights reserved.
 //
+//  Code from the following tutorial: http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit.
+//
 
 #import <UIKit/UIKit.h>
 

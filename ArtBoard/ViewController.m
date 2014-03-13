@@ -63,7 +63,7 @@
         UIGraphicsBeginImageContext(self.view.frame.size);
         [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush*2); //if just
         CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
         CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
@@ -88,11 +88,87 @@
 }
 
 - (IBAction)pencilPressed:(id)sender {
+    
+    UIButton * PressedButton = (UIButton*)sender;
+    
+    switch(PressedButton.tag)
+    {
+        case 0:
+            red = 0.0/255.0;
+            green = 0.0/255.0;
+            blue = 0.0/255.0;
+            break;
+        case 1:
+            red = 105.0/255.0;
+            green = 105.0/255.0;
+            blue = 105.0/255.0;
+            break;
+        case 2:
+            red = 255.0/255.0;
+            green = 0.0/255.0;
+            blue = 0.0/255.0;
+            break;
+        case 3:
+            red = 0.0/255.0;
+            green = 0.0/255.0;
+            blue = 255.0/255.0;
+            break;
+        case 4:
+            red = 102.0/255.0;
+            green = 204.0/255.0;
+            blue = 0.0/255.0;
+            break;
+        case 5:
+            red = 102.0/255.0;
+            green = 255.0/255.0;
+            blue = 0.0/255.0;
+            break;
+        case 6:
+            red = 51.0/255.0;
+            green = 204.0/255.0;
+            blue = 255.0/255.0;
+            break;
+        case 7:
+            red = 160.0/255.0;
+            green = 82.0/255.0;
+            blue = 45.0/255.0;
+            break;
+        case 8:
+            red = 255.0/255.0;
+            green = 102.0/255.0;
+            blue = 0.0/255.0;
+            break;
+        case 9:
+            red = 255.0/255.0;
+            green = 255.0/255.0;
+            blue = 0.0/255.0;
+            break;
+    }
+    
 }
 
 - (IBAction)eraserPressed:(id)sender {
+    red = 255.0/255.0;
+    green = 255.0/255.0;
+    blue = 255.0/255.0;
+    opacity = 1.0;
 }
 
 - (IBAction)settings:(id)sender {
 }
+
+//shake to clear screen
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if ( event.subtype == UIEventSubtypeMotionShake )
+    {
+        self.mainImage.image = nil;
+    }
+    
+    if ( [super respondsToSelector:@selector(motionEnded:withEvent:)] )
+        [super motionEnded:motion withEvent:event];
+}
+
+- (BOOL)canBecomeFirstResponder
+{ return YES; }
 @end
