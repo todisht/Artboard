@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SettingsViewControllerDelegate <NSObject>
+- (void)closeSettings:(id)sender;
+@end
+
+
 @interface SettingsViewController : UIViewController
+
+@property (nonatomic, weak) id<SettingsViewControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UISlider *brushControl;
 
@@ -22,7 +29,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *opacityValueLabel;
 
+@property CGFloat brush;
+@property CGFloat opacity;
+
 - (IBAction)sliderChanged:(id)sender;
 
 - (IBAction)closeSettings:(id)sender;
+
 @end

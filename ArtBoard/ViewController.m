@@ -27,6 +27,15 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    SettingsViewController * settingsVC = (SettingsViewController *)segue.destinationViewController;
+    settingsVC.delegate = self;
+    settingsVC.brush = brush;
+    settingsVC.opacity = opacity;
+    
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     mouseSwiped = NO;
@@ -171,4 +180,12 @@
 
 - (BOOL)canBecomeFirstResponder
 { return YES; }
+
+- (void)closeSettings:(id)sender {
+    
+    brush = ((SettingsViewController*)sender).brush;
+    opacity = ((SettingsViewController*)sender).opacity;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

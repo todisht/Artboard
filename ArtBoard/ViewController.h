@@ -8,9 +8,11 @@
 //  Code from the following tutorial: http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
+#import <UIKit/UIKit.h>
+#import "SettingsViewController.h"
+
+@interface ViewController : UIViewController <SettingsViewControllerDelegate> {
     CGPoint lastPoint;
     CGFloat red;
     CGFloat green;
